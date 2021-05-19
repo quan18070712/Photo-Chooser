@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Photo Chooser</string>
+    <string name="photo">Photo</string>
+    <string name="pro">PRO</string>
+
+    <!--    Button Name-->
+    <string name="settings">Settings</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="demo">Demo</string>
+    <string name="celebrities">Celebrities</string>
+
+    <string name="photo_button">Photo</string>
+    <string name="video">Video</string>
+</resources>
