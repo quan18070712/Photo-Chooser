@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         final File imagesDir = new File(dirPath);
         final File[] files = imagesDir.listFiles();;
 
+        assert files != null;
         for (File file : files) {
             final String path = file.getAbsolutePath();
             if (path.endsWith(".jpg") || path.endsWith(".png") || path.endsWith(".jepg")) {
