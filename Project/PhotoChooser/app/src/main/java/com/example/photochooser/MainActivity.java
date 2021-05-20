@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("NewApi")
     @Override
-    public void onRequestPermissionsResult(final int requestCode, final String[] permissions, final int[] grantResults){
+    public void onRequestPermissionsResult(final int requestCode, @NonNull final String[] permissions, @NonNull final int[] grantResults){
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
         if (requestCode == REQUEST_PERMISSIONS && grantResults.length > 0){
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     private List<String> fileList;
     private void addImagesFrom(String dirPath){
         final File imagesDir = new File(dirPath);
-        final File[] files = imagesDir.listFiles();;
+        final File[] files = imagesDir.listFiles();
 
         assert files != null;
         for (File file : files) {
@@ -139,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
     final class GalleryAdapter extends BaseAdapter {
 
-        private List<String> data = new ArrayList<>();
+        private final List<String> data = new ArrayList<>();
 
         void setData(List<String> data){
             if (this.data.size() > 0){
